@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 export function NavMenu() {
   return (
@@ -6,5 +6,5 @@ export function NavMenu() {
       <Link to="/">Home</Link>
       <Link to="/about">About</Link>
     </nav>
-  );
+  )
 }

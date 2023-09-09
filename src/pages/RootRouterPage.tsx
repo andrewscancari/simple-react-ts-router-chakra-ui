@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { HomePage } from './HomePage';
-import { AboutPage } from './AboutPage';
-import { NavMenu } from '../components/NavMenu';
+import { NavMenu } from '../components/NavMenu'
+import { AboutPage } from './AboutPage'
+import { HomePage } from './HomePage'
 
 function RootRouterPage() {
   return (
@@ -14,7 +14,7 @@ function RootRouterPage() {
         <Route path="/about" element={<AboutPage />} />
       </Routes>
     </BrowserRouter>
-  );
+  )
 }
 
-export default RootRouterPage;
+export default RootRouterPage
