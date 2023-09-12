@@ -8,9 +8,18 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'standard',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended'
+    'plugin:import/recommended',
+    'plugin:promise/recommended',
+    'plugin:prettier/recommended' // Precisa ser sempre o ultimo
   ],
-  plugins: ['react', 'jsx-a11y', '@typescript-eslint', 'simple-import-sort'],
+  plugins: [
+    'react',
+    'jsx-a11y',
+    '@typescript-eslint',
+    'simple-import-sort',
+    'import',
+    'chakra-ui'
+  ],
   overrides: [
     {
       env: {
@@ -28,9 +37,10 @@ module.exports = {
       jsx: true
     },
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
+    project: true,
+    tsconfigRootDir: __dirname
   },
-
   rules: {
     'simple-import-sort/imports': 'error',
     'simple-import-sort/exports': 'error',
@@ -64,7 +74,16 @@ module.exports = {
     'jsx-a11y/aria-unsupported-elements': 'warn',
     'jsx-a11y/role-has-required-aria-props': 'warn',
     'jsx-a11y/role-supports-aria-props': 'warn',
-    'react/no-unknown-property': 'error'
+    'react/no-unknown-property': 'error',
+    'chakra-ui/props-order': 'error',
+    'chakra-ui/require-specific-component': 'error',
+    'chakra-ui/props-shorthand': [
+      'error',
+      {
+        noShorthand: true,
+        applyToAllComponents: true
+      }
+    ]
   },
   settings: {
     react: {
@@ -72,7 +91,11 @@ module.exports = {
     },
     'import/parsers': {
       [require.resolve('@typescript-eslint/parser')]: ['.ts', '.tsx', '.d.ts']
+    },
+    'import/resolver': {
+      typescript: true,
+      node: true
     }
   },
-  ignorePatterns: ['node_modules', 'build']
+  ignorePatterns: ['node_modules', 'build', '.git']
 }
