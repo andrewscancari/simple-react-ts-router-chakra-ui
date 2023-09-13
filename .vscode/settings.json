@@ -3,8 +3,5 @@
     "source.fixAll.eslint": true,
     "source.addMissingImports": true,
     "source.organizeImports": true
-  },
-  "eslint.options": {
-    "configFile": "./.eslintrc.js"
   }
 }
