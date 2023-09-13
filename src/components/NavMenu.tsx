@@ -1,10 +1,12 @@
+import { HStack } from '@chakra-ui/react'
 import { Link } from 'react-router-dom'
 
 export function NavMenu() {
   return (
-    <nav>
+    <HStack gap="16px">
       <Link to="/">Home</Link>
+      <Link to="/contact">Contact</Link>
       <Link to="/about">About</Link>
-    </nav>
+    </HStack>
   )
 }
