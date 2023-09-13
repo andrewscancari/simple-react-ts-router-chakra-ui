@@ -1,3 +1,5 @@
+import { Header } from '../components/Header'
+
 export function AboutPage() {
-  return <h1>About</h1>
+  return <Header title="About" />
 }
